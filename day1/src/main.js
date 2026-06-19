@@ -1,75 +1,52 @@
 import './style.css'
 import gsap from 'gsap'
 
-
-/**
- * methods
- * .to
- * .from
- * .fromto 
- * .set
- */
-
-// const box= document.querySelector(".box");
-// gsap.to(box, {
-
-// })
-
-
-// aise bhi kar skte hai 
-
 // gsap.to('.box', {
-
-// } )
-
-
-// gsap.to(['.box', '.box2']) for multiple selection
-
+//   x: 800,
+//   duration: 1.5,
+//   delay: 0.6,
+//   ease: "power2"
+// })
 
 
 // gsap.to('.box', {
-//   // properties 
+//   x: 800,
+//   duration: 1.5,
 //   delay: 0.6,
-//   x: 100,
-//   duration: 1,
+//   ease: "elastic"
 // })
 
 
-// we do not need to write px, gsap automatically takes it as in px (pixels) by default
-
-/**
- * default units
- * length px
- * time s
- */
-
-
-// gsap.from('.box', {
+// gsap.to('.box', {
+//   x: 800,
+//   duration: 1.5,
 //   delay: 0.6,
-//   x: 100,
-//   duration: 1,
+//   ease: "bounce.inOut"
 // })
 
 
-gsap.fromTo(
-  '.box',
-  {
-    x: 0,
-  },
-  {
-    delay: 0.6,
-    duration: 1,
-    x: 400,
-    y: 200
-  })
+// gsap.to('.box', {
+//   x: 800,
+//   duration: 1.5,
+//   delay: 0.6,
+//   ease: "steps(12)",
+//   repeat: -1,
+// })
 
 
-//custom properties
 
-const obj = {
-  a: 0,
-}
-
-gsap.to(obj, {
-  a:100
+gsap.set(".box", {
+  x: -300,
 })
+
+gsap.to('.box', {
+  x: 1500,
+  duration: 1,
+  delay: 0.6,
+  ease: "power2.inOut",
+  repeat: -1,
+  // yoyo: true
+})
+
+
+
