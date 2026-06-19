@@ -1,51 +1,99 @@
 import './style.css'
 import gsap from 'gsap'
 
+// timeline ------------------------------------------------------------------------------------------------
 
 
-// animation libraries  -> gsap
 
-// STAGGER 
 
-// gsap.to('.box', {
+const tl= gsap.timeline();
+
+// tl.to(".box", {
 //   x: 1200,
 //   duration: 1.3,
-//   ease: "power2.inOut",
-//   delay: 0.6,
-//   stagger: 1,   //delay between the boxes
-// })
-
-
-// gsap.to('.box', {
-//   x: 800,
-//   duration: 1.3,
-//   ease: "power2.inOut",
-//   delay: 0.6,
-//   stagger: -0.1,   //delay between the boxes (time)
-// })
-
-
-// gsap.to('.box', {
+//   ease: "power4.inOut",
+//   delay: 0.6
+// }).to(".box1", {
 //   x: 1200,
 //   duration: 1.3,
-//   ease: "power2.inOut",
-//   delay: 0.6,
-//   stagger: {
-//     each: 0.1,
-//     from: "random"
-//   }
+//   ease: "power4.inOut",
+// }).to(".box2", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// }).to(".box3", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// })
+
+
+// position parameters ------------------------------------------------------------------------------------------------
+
+
+// "<" "<0.2"
+
+// tl.to(".box", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+//   delay: 0.6
+// }).to(".box1", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// },"<").to(".box2", { 
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// }).to(".box3", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// }, "<0.2")
+
+
+// "-=" "+="
+
+
+// tl.to(".box", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+//   delay: 0.6
+// }).to(".box1", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// },"+=0.2").to(".box2", { 
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
+// }).to(".box3", {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power4.inOut",
 // })
 
 
 
-gsap.from('h1 span', {
-  yPercent: 100,
-  opacity:0,
-  duration1: 1.5,
-  ease: "expo.out",
-  stagger: {
-    each: 0.08,
-    from: "center"
-  }
-})
+//labels , labels-=0.2
 
+tl.to(".box", {
+  x: 1200,
+  duration: 1.3,
+  ease: "power4.inOut",
+  delay: 0.6
+}).to(".box1", {
+  x: 1200,
+  duration: 1.3,
+  ease: "power4.inOut",
+}, "adi" ).to(".box2", { 
+  x: 1200,
+  duration: 1.3,
+  ease: "power4.inOut",
+}).to(".box3", {
+  x: 1200,
+  duration: 1.3,
+  ease: "power4.inOut",
+}, "adi-=0.8")

@@ -11,34 +11,25 @@ html, body{
 }
 
 
-.box{
+.box, .box1, .box2, .box3{
   height: 100px;
   width: 100px;
-  background-color: palevioletred;
   margin-bottom: 1rem;
 }
 
-
-#app{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heading{
-  overflow: hidden;
+.box{
+  background-color: palevioletred;
 }
 
 
-h1{
-  font-size: 5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: white;
-  line-height: 0.9;
+.box1{
+  background-color: rgb(38, 124, 121);
 }
 
-span{
-  display: inline-block;
+.box2{
+  background-color: rgb(126, 55, 192);
 }
+
+.box3{
+  background-color: rgb(126, 139, 54);
+} 
