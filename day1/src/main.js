@@ -2,62 +2,50 @@ import './style.css'
 import gsap from 'gsap'
 
 
-gsap.set(".box", {
-  x: -300,
-})
 
+// animation libraries  -> gsap
+
+// STAGGER 
 
 // gsap.to('.box', {
-//   x: 500,
-//   delay: 0.6,
-//   duration: 1.4,
+//   x: 1200,
+//   duration: 1.3,
 //   ease: "power2.inOut",
-
-
-//   onStart: ()=>{
-//     console.log("Animation started");
-//   },
-
-//   onComplete: ()=>{
-//     console.log("Animation completed adi!");
-    
-//   }
+//   delay: 0.6,
+//   stagger: 1,   //delay between the boxes
 // })
 
+
 // gsap.to('.box', {
-//   x: 500,
-//   delay: 0.6,
-//   duration: 1.4,
+//   x: 800,
+//   duration: 1.3,
 //   ease: "power2.inOut",
+//   delay: 0.6,
+//   stagger: -0.1,   //delay between the boxes (time)
+// })
 
 
-//   onStart: ()=>{
-//     console.log("Animation started");
-//   },
-
-//   onComplete: ()=>{
-//     gsap.to(".box", {
-//       y:300
-//     })
-    
+// gsap.to('.box', {
+//   x: 1200,
+//   duration: 1.3,
+//   ease: "power2.inOut",
+//   delay: 0.6,
+//   stagger: {
+//     each: 0.1,
+//     from: "random"
 //   }
 // })
 
 
-gsap.to('.box', {
-  x: 500,
-  delay: 0.6,
-  duration: 1.4,
-  ease: "power2.inOut",
 
-
-  onStart: ()=>{
-    console.log("Animation started");
-  },
-
-  onUpdate: ()=>{
-    console.log("frames");
+gsap.from('h1 span', {
+  yPercent: 100,
+  opacity:0,
+  duration1: 1.5,
+  ease: "expo.out",
+  stagger: {
+    each: 0.08,
+    from: "center"
   }
 })
-
 
