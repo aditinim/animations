@@ -16,7 +16,7 @@ gsap.set(".content", {
 
 const tl= gsap.timeline({
   scrollTrigger: {
-    trigger: ".page2",
+    trigger: ".page2", 
     start: "top top",
     end: "top -40%",
     scrub: true , 
