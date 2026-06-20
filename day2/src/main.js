@@ -8,29 +8,19 @@ import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, Draggable,InertiaPlugin, Flip);
 
-// const split= new SplitText(".title h1", {
-//   type: "chars, words, lines",
-//   wordsClass: 'titleWord',
-//   charsClass: "titleChars"
-// });
 
-// gsap.from(split.chars, {
-//   yPercent: -50,
-//   opacity:0,
-//   duration: 1,
-//   ease: "expo.out",
-//   stagger: {
-//     each: 0.2,
-//     from: "start"
-//   }
-// })
+// FLIP - first - last- invert- play
 
 
-Draggable.create(".box", {
-  bounds: "#app",
-  // type: "x",
-  // type: "y",
-  type: "x, y",
-  edgeResistance: 0.5,
-  inertia: true,
-});
+const img= document.querySelector(".specialImage");
+
+
+img.addEventListener('click', ()=>{
+  const state= Flip.getState(img);
+  document.querySelector(".imageShow").appendChild(img);
+
+  Flip.from(state , {
+    duration: 0.8,
+    ease: "power3.inOut"
+  })
+})

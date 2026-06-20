@@ -17,6 +17,7 @@ html, body{
   justify-content: center;
   align-items: center;
   color: white;
+  gap: 10px;
 }
 
 #app .title{
@@ -45,10 +46,33 @@ html, body{
   background-color: yellow;
 }
 
-.titleWord{
-  overflow: hidden;
+.imageGallery{
+  height: 30%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* background-color: white; */
+  overflow-y: scroll;
 }
 
-.titleChars{
-  overflow: hidden;
+.imageGallery img{
+  height: 40%;
+  width: 40%;
+  object-fit: cover;
+}
+
+
+.imageShow{
+  height: 70%;
+  width: 60%;
+  background-color: rgb(14, 30, 44);
+}
+
+
+.imageShow img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
 }
