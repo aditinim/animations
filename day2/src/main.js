@@ -4,8 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { Draggable } from "gsap/Draggable";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
+import { Flip } from "gsap/Flip";
 
-gsap.registerPlugin(SplitText, ScrollTrigger, Draggable,InertiaPlugin);
+gsap.registerPlugin(SplitText, ScrollTrigger, Draggable,InertiaPlugin, Flip);
 
 // const split= new SplitText(".title h1", {
 //   type: "chars, words, lines",
