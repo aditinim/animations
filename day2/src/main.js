@@ -1,60 +1,43 @@
 import './style.css'
-import gsap from 'gsap'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
-const play = document.querySelector(".play");
-const pause = document.querySelector(".pause");
-const restart = document.querySelector(".restart");
-const reverse = document.querySelector(".reverse");
-const seek = document.querySelector(".seek");
-
-
-
-
-const tl = gsap.timeline({paused: true});
-
-
-tl.to(".box", {
-  x: 1200,
-  duration: 1,
-  ease: "power4.inOut",
-  delay: 0.6
-})
-.to(".box1", {
-  x: 1200,
-  duration: 1,
-  ease: "power4.inOut",
-}, )
-.to(".box2", { 
-  x: 1200,
-  duration: 1,
-  ease: "power4.inOut",
-}).addLabel('adi')
-.to(".box3", {
-  x: 1200,
-  duration: 1,
-  ease: "power4.inOut",
-},)
-
-
-
-play.addEventListener("click", ()=>{
-  tl.play();
-})
-
-pause.addEventListener("click", ()=>{
-  tl.pause();
+gsap.set(".imageDiv", {
+  scale: 0.3
 })
 
 
-restart.addEventListener("click", ()=>{
-  tl.restart();
+gsap.set(".content", {
+  gap: "50rem",
 })
 
-reverse.addEventListener("click", ()=>{
-  tl.reverse();
-})
 
-seek.addEventListener("click", ()=>{
-  tl.seek("adi");
-})
+const tl= gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page2",
+    start: "top top",
+    end: "top -40%",
+    scrub: true , 
+    pin: true,  //jab tk animation poora nah ho, page scroll nah ho
+  }
+});
+
+
+tl.to(".imageDiv", {
+  scale: 1,
+  // duration: 1.3,
+  ease: "power4.out", 
+  
+}).to('.content', {
+  gap: "2rem"
+}, "<")
+
+// scroll trigger- > start , triggering element, end 
+/**
+ * pattern to write start and end
+ * "___ ___"
+ * first-> top , bottom, center (triggering element)
+ * second-> top, bottom, center, 0%-100% (viewport)
+ */
