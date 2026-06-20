@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+
+.box, .box1, .box2{
+  height: 200px;
+  width: 200px;
+  background-color: rgb(118, 217, 222);
+
+}
+
+.box1{
+  
+  background-color: rgb(19, 100, 79);
+}
+
+.box2{
+  
+  background-color: rgb(76, 100, 19);
+}
